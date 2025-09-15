@@ -24,7 +24,7 @@
 
 
 ## Allure 
-Generate Allure reports (needs additional instalation)
+Generate Allure reports (needs additional installation)
 ```java
 allure generate allure-results --clean -o allure-report
 Report successfully generated to allure-report
