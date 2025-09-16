@@ -1,20 +1,7 @@
-package API;
+package api;
 
 
-
-import io.restassured.RestAssured;
-import io.restassured.config.SSLConfig;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
-import io.restassured.path.json.config.JsonPathConfig.NumberReturnType;
-import org.junit.jupiter.api.BeforeAll;
-
-import static io.restassured.RestAssured.basePath;
-import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.config;
-import static io.restassured.RestAssured.port;
-import static io.restassured.config.JsonConfig.jsonConfig;
-import static io.restassured.config.RestAssuredConfig.newConfig;
 
 public abstract class BaseAPI {
 

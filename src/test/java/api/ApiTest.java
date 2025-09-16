@@ -1,5 +1,4 @@
-package API;
-
+package api;
 
 
 import org.junit.jupiter.api.Tag;
@@ -8,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-@Tag("API")
+@Tag("api")
 public class ApiTest {
     @Test
     public void verifyGetAPI() {
@@ -28,6 +27,7 @@ public class ApiTest {
                 .body("title", equalTo("sunt aut facere repellat provident occaecati excepturi optio reprehenderit"))
                 .body("body", equalTo("quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"));
     }
+
     @Test
     public void verifyPostAPI() {
         // Given

@@ -10,13 +10,13 @@
 ./gradlew clean test --no-build-cache
 ```
 
-### UI Tests
+### ui Tests
 ```
 ./gradlew clean uiTests --no-build-cache
 ```
 
 
-### API Tests
+### api Tests
 ```
 ./gradlew clean apiTests --no-build-cache
 ```
@@ -25,8 +25,10 @@
 
 ## Allure 
 Generate Allure reports (needs additional installation)
-```java
+```
 allure generate allure-results --clean -o allure-report
-Report successfully generated to allure-report
 allure open .\allure-report\
 ```
+
+TestUser802
+cf@ATyv+XI*{
