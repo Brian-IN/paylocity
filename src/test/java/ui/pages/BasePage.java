@@ -2,7 +2,6 @@ package ui.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,6 +18,7 @@ public class BasePage {
     public BasePage(WebDriver webDriver) {
 
         this.webDriver = webDriver;
+
         Properties prop = new Properties();
 
         try (InputStream input = BasePage.class.getClassLoader().getResourceAsStream("config/config.properties")) {
@@ -26,14 +26,10 @@ public class BasePage {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         webDriver.get(prop.getProperty("url") + prop.getProperty("loginPage"));
 
-    }
-
-    public void closeDriver() {
-        webDriver.close();
     }
 
 

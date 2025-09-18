@@ -1,30 +1,43 @@
 package pojos;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Employee {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     String id;
-    String fistName;
+    String firstName;
     String lastName;
-    String dependents;
+    String userName;
+    int dependants;
     double salary;
     double grossPay;
     double benefitsCost;
     double netPlay;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public void setDependents(String dependents) {
-        this.dependents = dependents;
+    public void setDependants(int dependants) {
+        this.dependants = dependants;
     }
 
     public void setSalary(double salary) {
@@ -47,16 +60,16 @@ public class Employee {
         return id;
     }
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public String getDependents() {
-        return dependents;
+    public int getDependants() {
+        return dependants;
     }
 
     public double getSalary() {
@@ -75,5 +88,28 @@ public class Employee {
         return netPlay;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", fistName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", dependents=" + dependants +
+                ", salary=" + salary +
+                ", grossPay=" + grossPay +
+                ", benefitsCost=" + benefitsCost +
+                ", netPlay=" + netPlay +
+                '}';
+    }
 
+    public String toJson() {
+        try {
+
+            ObjectMapper mapper = new ObjectMapper();
+
+            return mapper.writeValueAsString(this);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

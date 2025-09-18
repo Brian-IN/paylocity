@@ -1,0 +1,11 @@
+username,firstName,lastName,dependants,salary
+TestUser802,John,Doe,2,55000
+TestUser802,Alice,Smith,1,60000
+TestUser802,Bob,King,0,48000
+TestUser802,Maria,Rodriguez,3,72000
+TestUser802,Robert,Johnson,2,51000
+TestUser802,Laura,Garcia,1,53000
+TestUser802,Daniel,Lee,0,47000
+TestUser802,Carol,Wilson,4,68000
+TestUser802,Krishna,Patel,2,75000
+TestUser802,Tuan,Nguyen,0,50000
